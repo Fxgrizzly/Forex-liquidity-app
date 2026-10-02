@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Liquidity Signals</title>
+  <link rel="manifest" href="/manifest.json" />
+  <meta name="theme-color" content="#0f172a" />
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+  <header>
+    <h1>Liquidity Signals</h1>
+    <div id="status" class="status">connecting…</div>
+  </header>
+
+  <main>
+    <div id="signals-container">
+      <p class="empty">Waiting for data…</p>
+    </div>
+  </main>
+
+  <footer>
+    <p>Rules-based pattern matcher. Not financial advice — verify every signal yourself.</p>
+  </footer>
+
+  <script src="/static/app.js"></script>
+  <script>
+    if ("serviceWorker" in navigator) {
+      navigator.serviceWorker.register("/service-worker.js");
+    }
+  </script>
+</body>
+  </html>
