@@ -1,0 +1,108 @@
+:root {
+  --bg: #0f172a;
+  --card: #1e293b;
+  --text: #e2e8f0;
+  --muted: #94a3b8;
+  --buy: #22c55e;
+  --sell: #ef4444;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+}
+
+header {
+  padding: 20px 16px 12px;
+  border-bottom: 1px solid #334155;
+}
+
+header h1 {
+  margin: 0 0 6px;
+  font-size: 22px;
+}
+
+.status {
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.status.ok { color: var(--buy); }
+.status.error { color: var(--sell); }
+
+main {
+  padding: 16px;
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.symbol-block {
+  margin-bottom: 24px;
+}
+
+.symbol-block h2 {
+  font-size: 16px;
+  color: var(--muted);
+  margin-bottom: 8px;
+}
+
+.signal-card {
+  background: var(--card);
+  border-radius: 12px;
+  padding: 14px 16px;
+  margin-bottom: 10px;
+  border-left: 4px solid var(--muted);
+}
+
+.signal-card.BUY { border-left-color: var(--buy); }
+.signal-card.SELL { border-left-color: var(--sell); }
+
+.signal-card .direction {
+  font-weight: 700;
+  font-size: 15px;
+}
+
+.signal-card.BUY .direction { color: var(--buy); }
+.signal-card.SELL .direction { color: var(--sell); }
+
+.signal-card .prices {
+  display: flex;
+  gap: 16px;
+  margin: 8px 0;
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.signal-card .prices strong {
+  color: var(--text);
+}
+
+.signal-card .reason {
+  font-size: 13px;
+  color: var(--muted);
+  line-height: 1.4;
+}
+
+.signal-card .time {
+  font-size: 11px;
+  color: #64748b;
+  margin-top: 6px;
+}
+
+.empty {
+  color: var(--muted);
+  text-align: center;
+  margin-top: 40px;
+}
+
+footer {
+  text-align: center;
+  padding: 20px 16px 40px;
+  color: #475569;
+  font-size: 12px;
+  }
